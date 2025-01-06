@@ -1,0 +1,55 @@
+#Addbook{
+    min-height: 80vh;
+    padding: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #1976D2;
+    text-align: center;
+
+    h1{
+        font-size: 50px;
+        font-weight: 400;
+    }
+
+    form{
+        color: white;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: column;
+        width: 800px;
+        margin: 0px auto;
+        gap: 30px;
+        margin-top: 40px;
+        border-radius: 30px;
+        background-color: #1976D2;
+        padding: 10px 70px 30px;
+        outline: none;
+        input{
+            border-radius: 30px;
+            border: none;
+            outline: none;
+            padding: 10px 20px;
+            margin-top: 30px;
+        }
+
+        button{
+            padding: 10px;
+            border-radius: 30px;
+            transition: 0.3s;
+            border: 1px solid #1976D2;
+            cursor: pointer;
+            &:hover{
+                background-color: #1976D2;
+                color: white;
+                border: 1px solid white;
+            }
+        }
+    }
+
+    .validerror{
+        background-color: red;
+        padding: 5px;
+        width: 100%;
+        border-radius: 30px;
+        border: 2px solid black;
+    }
+}

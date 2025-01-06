@@ -1,0 +1,73 @@
+#aboutus{
+    margin: 30px auto;
+    .about-up{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 100px;
+        width: 100%;
+        margin: 20px auto;
+        justify-content: space-between;
+        .ab-up-l{
+            width: 30%;
+            h3{
+                color: #F45D96;
+            }
+            p{
+                font-size: 40px;
+            }
+        }
+        .ab-up-r{
+            width: 55%;
+            p{
+                font-size: 20px;
+            }
+        }
+    }
+    .about-low{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 100px;
+        width: 100%;
+        margin: 150px auto;
+        position: relative;
+        justify-content: space-between;
+        .ab-lo-l{
+            background-image: url('https://preview.colorlib.com/theme/florist/img/about/about-video.jpg.webp');
+            background-size: cover;
+            width: 60%;
+            height: 70vh;
+            background-position:center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg{
+                color: white;
+                background-color: #F45D96;
+                border-radius: 50%;
+                font-size: 75px;
+            }
+        }
+        .ab-lo-r{
+            right: 0%;
+            top: -10%;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            background-color: white;
+            width: 45%;
+            padding: 40px;
+            height: 100%;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            h3{
+                color: #F45D96;
+            }
+            button{
+                width: max-content;
+            }
+        }
+    }
+}

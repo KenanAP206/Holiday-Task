@@ -1,0 +1,74 @@
+#feature{
+    padding: 40px 0;
+    .app {
+        font-family: Arial, sans-serif;
+
+      }
+      
+      .features {
+        display: flex;
+        justify-content: space-around;
+        margin: 50px 0;
+      }
+      
+      .feature {
+
+        max-width: 200px;
+      }
+      
+      .feature h3 {
+        font-size: 18px;
+        margin-bottom: 5px;
+        color: #333;
+      }
+      
+      .feature p {
+        font-size: 14px;
+        color: #666;
+      }
+      
+      .card-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 20px auto;
+        gap: 10px;
+      }
+      
+      .card {
+        width: 320px;
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+      }
+      
+      .card-image {
+        width: 100%;
+        z-index: 1;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .card-text{
+        z-index: 10;
+        width: 280px;
+        bottom: 20px;
+        left: 20px;
+        background-color: white;
+        position: absolute;
+
+      }
+      
+      .card h4 {
+        font-size: 16px;
+        margin: 10px 0 5px;
+        color: #333;
+      }
+      
+      .card p {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 10px;
+      }
+      
+}
