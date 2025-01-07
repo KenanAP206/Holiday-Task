@@ -12,6 +12,8 @@ import axios from "axios"
 import MasterSlider from '../../../Components/User/Main/MasterSlider/index'
 import Feature from '../../../Components/User/Main/Feature/index'
 import AboutUs from '../../../Components/User/Main/AboutUs/index'
+import Imager from '../../../Components/User/Main/Imager/index'
+import Posts from '../../../Components/User/Main/Posts/index'
 function Home() {
   const [selectedDate, setSelectedDate] = useState(new Date());
   let [data,setData]=useState([])
@@ -27,6 +29,8 @@ function Home() {
       <MasterSlider />
       <Feature />
       <AboutUs />
+      <Imager />
+      <Posts />
     </div>
   )
 }

@@ -18,7 +18,7 @@ const AboutUs = () => {
                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><FaCirclePlay /></a>
             </div>
             <div className="ab-lo-r">
-                <h3>Slow Flowers’ Floral Insights</h3>
+                <h3>SLOW FLOWERS’ FLORAL INSIGHTS</h3>
                 <h2>Dried flowers are having a renaissance</h2>
                 <p>This awareness has been stimulated by sustainable sourcing practices and the desire on the part of North American flower growers to “extend the season” beyond the last frost.</p>
                 <button>CONTACT US</button>

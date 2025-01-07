@@ -16,8 +16,8 @@ import { NavLink } from 'react-router-dom';
 
 const pages = [
   { name: 'Dashboard', path: '/admin' },
-  { name: 'Books', path: '/admin/books' },
-  { name: 'Add-Book', path: '/admin/books/add' },
+  { name: 'Products', path: '/admin/books' },
+  { name: 'Add-Product', path: '/admin/books/add' },
 ];
 const settings = [
   { name: 'Dashboard', path: '/admin' },

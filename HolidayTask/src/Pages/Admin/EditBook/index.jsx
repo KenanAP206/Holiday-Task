@@ -87,7 +87,7 @@ function index() {
       return (
         
         <section id='editbook'>
-          <h1>Edit Book</h1>
+          <h1>Edit Product</h1>
     
         <form onSubmit={formik.handleSubmit}>
     

@@ -47,7 +47,7 @@ function index() {
           variant="h6"
           sx={{ textAlign: 'center', mb: 2, fontWeight: 'bold', color: 'primary.main' }}
         >
-          Book List
+          Product List
         </Typography>
         <Table>
           <TableHead>

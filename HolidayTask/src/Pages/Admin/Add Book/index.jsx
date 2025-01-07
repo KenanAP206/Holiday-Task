@@ -45,7 +45,7 @@ function index() {
   return (
     
     <section id='Addbook'>
-      <h1>Add New Book</h1>
+      <h1>Add New Product</h1>
 
           <form onSubmit={formik.handleSubmit}>
 

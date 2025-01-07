@@ -1,0 +1,117 @@
+#posts{
+    margin: 100px auto;
+    .latest-posts {
+        width: 100%;
+        margin: 0 auto;
+        font-family: 'Arial', sans-serif;
+      }
+      
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      
+      .header h2 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 30px;
+        h3{
+            font-size: 19px;
+            letter-spacing: 3px;
+            font-weight: 600;
+            color: #F55D96;
+            font-family: "Quicksand", sans-serif;
+            margin-bottom: 10px;
+        }
+        p{
+            font-size: 40px;
+            font-weight: 500;
+            font-family: "Libre Baskerville", serif;
+        }
+      }
+      
+      .view-all {
+        background-color: transparent;
+        border: 2px solid #f72585;
+        color: black;
+        border-radius: 30px;
+        padding: 15px 25px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 550;
+        letter-spacing: 3px;
+        transition: all 0.3s ease;
+      }
+      
+      
+      .posts-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      
+      .post-card {
+        flex: 1 1 calc(33.333% - 20px);
+        background-color: white;
+        position: relative;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        &:hover{
+            a{
+                text-decoration: underline;
+            }
+            .category{
+                background-color: #f72585;
+            }
+        }
+      }
+      
+      .post-image {
+        width: 100%;
+        height: auto;
+      }
+      
+      .post-card-text{
+        padding: 30px 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        a{
+            font-size: 25px;
+            font-family: "Libre Baskerville", serif;
+        }
+      }
+
+      .category {
+        background-color: black;
+        color: white;
+        font-size: 13px;
+        padding: 5px 10px;
+        margin: 10px 0;
+        display: inline-block;
+        position: absolute;
+        font-weight: 600;
+        top: 51%;
+        left: 40%;
+      }
+      
+      .post-title {
+        color: #333;
+        margin: 10px 0;
+      }
+      
+      .post-description {
+        font-size: 16px;
+        color: #666;
+        margin: 10px 0;
+        font-family: "Quicksand", sans-serif;
+      }
+      
+      .post-date {
+        font-size: 14px;
+        color: #aaa;
+      }
+      
+}

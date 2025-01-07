@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Parisienne&family=Passero+One&family=Quicksand:wght@300..700&family=Righteous&display=swap');
+
+#imager{
+    background-image: url('https://preview.colorlib.com/theme/florist/img/call-bg.jpg.webp');
+    height: 468px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+        .imager-main{
+            top: 25%;
+            left: 5%;
+            position: absolute;
+            width: 35%;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            h3{
+                font-family: "Quicksand", sans-serif;
+            }
+            h2{
+                letter-spacing: 5px;
+                font-size: 45px;
+                font-family: 'Parisienne';
+            }
+            .imager-btns{
+                display: flex;
+                gap: 30px;
+                button{
+                    border: none;
+                    border-radius: 30px;
+                    padding: 15px 20px;
+                    font-size: 14px;
+                    letter-spacing: 2px;
+                    cursor: pointer;
+                    font-weight: 550;
+                }
+                .btn1{
+                    color: white;
+                    background-color: #F45D96;
+                }
+                .btn2{
+                    background-color: white;
+                    color: #F45D96;
+                }
+            }
+        }
+}
