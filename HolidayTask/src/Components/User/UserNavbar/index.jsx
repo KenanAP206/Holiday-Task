@@ -5,7 +5,7 @@ import { CiSearch } from "react-icons/ci";
 import { favoriteContext } from '../../../Context/FavoritesContext';
 import { basketContext } from '../../../context/BasketContext';
 import { NavLink } from 'react-router-dom';
-
+import { RiAdminFill } from "react-icons/ri";
 function index() {
   let {favorite} = useContext(favoriteContext)
   let {basket} = useContext(basketContext)
@@ -24,9 +24,9 @@ function index() {
           HOME
           </NavLink>
         </li>
-        <li>
-          <a href="#">ABOUT</a>
-        </li>
+        <NavLink style={({ isActive }) =>isActive ? { color: "#F45D96"} : { color: "black" }} to='/about'>
+          ABOUT
+          </NavLink>
         <li>
           <a href="#">SERVICES</a>
         </li>
@@ -40,7 +40,9 @@ function index() {
           <a href="#">BLOG</a>
         </li>
         <li>
-          <a href="#">CONTACT</a>
+        <NavLink style={({ isActive }) =>isActive ? { color: "#F45D96"} : { color: "black" }} to='/contact'>
+          CONTACT
+          </NavLink>
         </li>
       </ul>
 
@@ -56,9 +58,10 @@ function index() {
         <NavLink to='/Basket'> <a href="#" className="icon">
         <PiHandbagLight /><span className="count">{basket ? basket.length : 0}</span>
         </a></NavLink>
-        <a href="#" className="price">
-          $65.0
-        </a>
+        <NavLink className='adminer' to='/admin'>
+          Admin
+          <RiAdminFill /> 
+        </NavLink>
       </div>
     </nav>
     </div>

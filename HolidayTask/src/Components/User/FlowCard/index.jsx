@@ -6,7 +6,8 @@ import { CiHeart } from "react-icons/ci";
 import { useContext } from 'react';
 import { basketContext } from '../../../context/BasketContext';
 import { favoriteContext } from '../../../Context/FavoritesContext';
-
+import { NavLink } from 'react-router-dom';
+import Swal from 'sweetalert2';
 function index(props) {
   let {basket,setBasket}=useContext(basketContext)
   let {favorite,setFavorite}=useContext(favoriteContext)
@@ -16,9 +17,39 @@ function index(props) {
     if(findBasket){
         findBasket.count++
         setBasket([...basket])
+
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 1000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+          }
+        });
+        Toast.fire({
+          icon: "success",
+          title: "+1 to Cart"
+        });
     }else{
         setBasket([...basket,{...product,count:1}])
-       
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+          }
+        });
+        Toast.fire({
+          icon: "success",
+          title: "Added to Cart"
+        });
     }
 }
 
@@ -26,9 +57,41 @@ function index(props) {
     let findFavorite= favorite.find(item=>item.id==product.id)
 
     if(findFavorite){
-       alert("artiq senin wishlistinde bu mehsul var bir de elave eliye bilmersen")
+      
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        }
+      });
+      Toast.fire({
+        icon: "error",
+        title: "Already in Favorites"
+      });
     }else{
        setFavorite([...favorite,product])
+
+       
+       const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        }
+      });
+      Toast.fire({
+        icon: "success",
+        title: "Added to Favorites"
+      });
     }
  }
 
@@ -37,7 +100,7 @@ function index(props) {
       <div className="fl-card-up">
         <img srcSet={props.image} alt="" />
         <div className="f-c-hover">
-        <IoIosSearch />
+      <NavLink to={`/${props.id}`}>   <IoIosSearch /></NavLink>
         <IoBagHandleOutline onClick={()=>handleAddBasket(props)} />
         <CiHeart  onClick={()=>handleAddFavorite(props)} />
         </div>

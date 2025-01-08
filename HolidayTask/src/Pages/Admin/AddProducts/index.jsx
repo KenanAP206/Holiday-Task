@@ -1,5 +1,5 @@
 import React from 'react'
-import './addbook.css'
+import './addproduct.css'
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios'
@@ -8,13 +8,13 @@ import Swal from 'sweetalert2'
 function index() {
   const formik = useFormik({
     initialValues: {
-      title: '',
+      name: '',
       image: '',
       price: '',
-      publishedYear: '',
+      category: '',
     },
     validationSchema: Yup.object({
-      title: Yup.string()
+      name: Yup.string()
         .max(50, 'Must be 50 characters or less')
         .required('⚠️REQUIRED⚠️'),
       image: Yup.string()
@@ -24,19 +24,16 @@ function index() {
         .typeError('Invalid Price') 
         .positive('Price must be a positive number') 
         .required('⚠️REQUIRED⚠️'), 
-      publishedYear: Yup.number()
-        .typeError('Invalid Year') 
-        .min(1, 'Invalid Year')
-        .max(2025, 'Invalid Year')
-        .positive('Price must be a positive number') 
-        .required('⚠️REQUIRED⚠️'), 
+      category: Yup.string()
+      .min(1, 'Must be 1 characters or more')
+      .required('⚠️REQUIRED⚠️'),
     }),
     onSubmit: values => {
-      axios.post('http://localhost:3000/books', values)
+      axios.post('http://localhost:3000/products', values)
       Swal.fire({
         position: "top-end",
         icon: "success",
-        title: "The Book Added",
+        title: "The Product Added",
         showConfirmButton: false,
         timer: 1500
       });
@@ -50,16 +47,16 @@ function index() {
           <form onSubmit={formik.handleSubmit}>
 
       <input
-        placeholder='Title'
-        id="title"
-        name="title"
+        placeholder='Name'
+        id="name"
+        name="name"
         type="text"
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
-        value={formik.values.title}
+        value={formik.values.name}
       />
-      {formik.touched.title && formik.errors.title ? (
-        <div className='validerror'>{formik.errors.title}</div>
+      {formik.touched.name && formik.errors.name ? (
+        <div className='validerror'>{formik.errors.name}</div>
       ) : null}
 
 
@@ -90,16 +87,16 @@ function index() {
       ) : null}
 
        <input
-      placeholder='Publish Year'
-        id="publishedYear"
-        name="publishedYear"
-        type="number"
+      placeholder='Category'
+        id="category"
+        name="category"
+        type="text"
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
-        value={formik.values.publishedYear}
+        value={formik.values.category}
       />
-      {formik.touched.publishedYear && formik.errors.publishedYear ? (
-        <div className='validerror'>{formik.errors.publishedYear}</div>
+      {formik.touched.category && formik.errors.category ? (
+        <div className='validerror'>{formik.errors.category}</div>
       ) : null}
 
       <button type="submit">Submit</button>

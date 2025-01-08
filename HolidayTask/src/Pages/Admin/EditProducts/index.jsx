@@ -1,5 +1,5 @@
 import {React, useState, useEffect} from 'react'
-import './editbook.css'
+import './editproduct.css'
 import { useParams } from 'react-router-dom'
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
@@ -16,11 +16,11 @@ function index() {
         .then((res) => {
             setData(res.data); 
             formik.setValues({
-              title: res.data.title,
+              name: res.data.name,
               description: res.data.description,
               author: res.data.author,
-              genre: res.data.genre,
-              language: res.data.language,
+              status: res.data.status,
+              category: res.data.category,
               image: res.data.image,
               price: res.data.price,
               publishedYear: res.data.publishedYear,
@@ -31,54 +31,37 @@ function index() {
 
     const formik = useFormik({
         initialValues: {
-          title: '',
+          name: '',
           description: '',
           author: '',
-          genre: '',
+          status: '',
           image: '',
           price: '',
           publishedYear: '',
         },
         validationSchema: Yup.object({
-          title: Yup.string()
+          name: Yup.string()
             .max(50, 'Must be 50 characters or less')
             .required('⚠️REQUIRED⚠️'),
-          description: Yup.string()
-            .max(50, 'Must be 50 characters or less')
-            .min(20, 'Must be 20 characters or more')
-            .required('⚠️REQUIRED⚠️'),
-          author: Yup.string()
+          status: Yup.string()
             .max(20, 'Must be 20 characters or less')
             .min(3, 'Must be 3 characters or more')
             .required('⚠️REQUIRED⚠️'),
-          genre: Yup.string()
-            .max(20, 'Must be 20 characters or less')
-            .min(3, 'Must be 3 characters or more')
-            .required('⚠️REQUIRED⚠️'),
-          language: Yup.string()
+          category: Yup.string()
             .max(20, 'Must be 20 characters or less')
             .min(3, 'Must be 3 characters or more')
             .required('⚠️REQUIRED⚠️'),
           image: Yup.string()
             .min(10, 'Must be 10 characters or more')
             .required('⚠️REQUIRED⚠️'),
-          price: Yup.number()
-            .typeError('Invalid Price') 
-            .positive('Price must be a positive number') 
-            .required('⚠️REQUIRED⚠️'), 
-          publishedYear: Yup.number()
-            .typeError('Invalid Year') 
-            .min(1, 'Invalid Year')
-            .max(2025, 'Invalid Year')
-            .positive('Price must be a positive number') 
-            .required('⚠️REQUIRED⚠️'), 
+    
         }),
         onSubmit: values => {
         axios.put(`http://localhost:3000/products/${id}`, values)
              Swal.fire({
                     position: "top-end",
                     icon: "success",
-                    title: "The Book Edited",
+                    title: "The Product Edited",
                     showConfirmButton: false,
                     timer: 1500
                   });
@@ -92,68 +75,44 @@ function index() {
         <form onSubmit={formik.handleSubmit}>
     
           <input
-            placeholder='Title'
-            id="title"
-            name="title"
+            placeholder='Name'
+            id="name"
+            name="name"
             type="text"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            value={formik.values.title}
+            value={formik.values.name}
           />
-          {formik.touched.title && formik.errors.title ? (
-            <div className='validerror'>{formik.errors.title}</div>
+          {formik.touched.name && formik.errors.name ? (
+            <div className='validerror'>{formik.errors.name}</div>
           ) : null}
 
-        <input
-            placeholder='Description'
-            id="description"
-            name="description"
-            type="text"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.description}
-          />
-          {formik.touched.description && formik.errors.description ? (
-            <div className='validerror'>{formik.errors.description}</div>
-          ) : null}
-        
-        <input
-            placeholder='Author'
-            id="author"
-            name="author"
-            type="text"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.author}
-          />
-          {formik.touched.author && formik.errors.author ? (
-            <div className='validerror'>{formik.errors.author}</div>
-          ) : null}
+       
 
         <input
-            placeholder='Genre'
-            id="genre"
-            name="genre"
+            placeholder='Status'
+            id="status"
+            name="status"
             type="text"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            value={formik.values.genre}
+            value={formik.values.status}
           />
-          {formik.touched.genre && formik.errors.genre ? (
-            <div className='validerror'>{formik.errors.genre}</div>
+          {formik.touched.status && formik.errors.status ? (
+            <div className='validerror'>{formik.errors.status}</div>
           ) : null}
             
             <input
-            placeholder='Language'
-            id="language"
-            name="language"
+            placeholder='Category'
+            id="category"
+            name="category"
             type="text"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            value={formik.values.language}
+            value={formik.values.category}
           />
-          {formik.touched.language && formik.errors.language ? (
-            <div className='validerror'>{formik.errors.language}</div>
+          {formik.touched.category && formik.errors.category ? (
+            <div className='validerror'>{formik.errors.category}</div>
           ) : null}
             
             
@@ -184,18 +143,7 @@ function index() {
             <div className='validerror'>{formik.errors.price}</div>
           ) : null}
     
-           <input
-          placeholder='Publish Year'
-            id="publishedYear"
-            name="publishedYear"
-            type="number"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.publishedYear}
-          />
-          {formik.touched.publishedYear && formik.errors.publishedYear ? (
-            <div className='validerror'>{formik.errors.publishedYear}</div>
-          ) : null}
+        
     
           <button type="submit">Submit</button>
         </form>

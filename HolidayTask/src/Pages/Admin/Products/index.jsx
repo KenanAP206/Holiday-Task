@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './Books.css'
+import './Products.css'
 import Table from '@mui/material/Table';
 import {Link, NavLink} from 'react-router-dom'
 import axios from 'axios';
@@ -53,9 +53,9 @@ function index() {
           <TableHead>
             <TableRow sx={{ backgroundColor: 'primary.main' }}>
               <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>ID</TableCell>
-              <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Title</TableCell>
+              <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Name</TableCell>
               <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Price</TableCell>
-              <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Published Year</TableCell>
+              <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Category</TableCell>
               <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Functions</TableCell>
             </TableRow>
           </TableHead>
@@ -63,13 +63,13 @@ function index() {
             {rows.map((row) => (
               <TableRow key={row.id}>
                 <TableCell>{row.id}</TableCell>
-                <TableCell>{row.title}</TableCell>
+                <TableCell>{row.name}</TableCell>
                 <TableCell>{row.price}</TableCell>
-                <TableCell>{row.publishedYear}</TableCell>
+                <TableCell>{row.category}</TableCell>
                 <TableCell>
-                  <NavLink to={`/admin/books/edit/${row.id}`}><Button sx={{color: 'orange' }}>Edit</Button></NavLink> 
+                  <NavLink to={`/admin/products/edit/${row.id}`}><Button sx={{color: 'orange' }}>Edit</Button></NavLink> 
                   <Button onClick={()=>HandleDelete(row.id)} sx={{color: 'red' }}>Delete</Button>
-                  <NavLink to={`/admin/books/${row.id}`}><Button>Details</Button></NavLink>
+                  <NavLink to={`/admin/products/${row.id}`}><Button>Details</Button></NavLink>
                   </TableCell>
               </TableRow>
             ))}

@@ -1,5 +1,5 @@
 import {React, useState, useEffect} from 'react';
-import './BookDetail.css';
+import './ProductDetail.css';
 import { useNavigate, useParams } from 'react-router-dom'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import DownloadIcon from '@mui/icons-material/Download';
@@ -19,25 +19,25 @@ function BookDetail() {
   
   return (
    <div className="main">
-       {data.map((book) => {
+       {data.map((product) => {
    return(
-    <div className="book-detail-container"  key={book.id}>
+    <div className="book-detail-container"  key={product.id}>
     <div className="book-image-section" >
       <img 
-        src={book.image}
-        alt={book.title}
+        src={product.image}
+        alt={product.title}
         className="book-cover"
       />
       <div className="scroll-buttons">
-        <button className="scroll-up" onClick={()=>navigate('/admin/books')}><ArrowBackIosNewIcon /></button>
+        <button className="scroll-up" onClick={()=>navigate('/admin/products')}><ArrowBackIosNewIcon /></button>
       </div>
     </div>
 
     <div className="book-info-section">
-      <h1>{book.title}</h1>
-      <h3>{book.author}</h3>
+      <h1>{product.title}</h1>
+      <h3>{product.author}</h3>
       <p className="book-description">
-       {book.description}
+       {product.description}
       </p>
       <div className="extra-details">
         <div>
@@ -46,11 +46,11 @@ function BookDetail() {
         </div>
         <div>
           <h4>Language</h4>
-          <p>{book.language}</p>
+          <p>{product.language}</p>
         </div>
         <div>
           <h4>Paperback</h4>
-          <p>Paper textured, full colour, {book.pagesCount} pages<br />ISBN: 987 3 32564 455 B</p>
+          <p>Paper textured, full colour, {product.pagesCount} pages<br />ISBN: 987 3 32564 455 B</p>
         </div>
       </div>
     </div>
@@ -73,7 +73,7 @@ function BookDetail() {
         <h1>Harry Potter: Half Blood Prince</h1>
         <h3>JK Rowling</h3>
         <p className="book-description">
-          Get ready to uncover the dark secrets and betrayals in the book. A thrilling adventure awaits you.
+          Get ready to uncover the dark secrets and betrayals in the product. A thrilling adventure awaits you.
         </p>
         <div className="action-buttons">
           <button className="start-reading">Start reading →</button>
