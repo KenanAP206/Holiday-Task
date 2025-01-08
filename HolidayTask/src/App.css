@@ -59,10 +59,7 @@ nav {
     transition: color 0.3s;
   }
 
-  .nav-links li a.active,
-  .nav-links li a:hover {
-    color: #F45D96;
-  }
+
 
   .icons {
     display: flex;
@@ -298,4 +295,8 @@ footer {
   .footer-credits a:hover {
     text-decoration: underline;
   }
+}
+
+.loadbar{
+  margin: 0px auto;
 }

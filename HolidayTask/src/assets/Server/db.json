@@ -30,7 +30,7 @@
           "price": 27.50,
           "image": "https://preview.colorlib.com/theme/florist/img/product/product-4.jpg.webp",
           "status": "NEW",
-          "category": "All"
+          "category": "Gift combos"
         },
         {
           "id": 5,
@@ -72,7 +72,7 @@
           "price": 27.50,
           "image": "https://preview.colorlib.com/theme/florist/img/product/product-9.jpg.webp",
           "status": "NEW",
-          "category": "Bouquet"
+          "category": "Gift combos"
         }
         ,
         {
@@ -81,7 +81,7 @@
           "price": 27.50,
           "image": "https://preview.colorlib.com/theme/florist/img/product/product-10.jpg.webp",
           "status": "NEW",
-          "category": "Bouquet"
+          "category": "Basket of flower"
         }
       ]
       

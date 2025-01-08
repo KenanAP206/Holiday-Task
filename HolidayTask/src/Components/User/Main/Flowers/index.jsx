@@ -42,10 +42,10 @@ function index() {
             <div className="flow-cards">
         {
         loading ? (
-          <CircularProgress />
+        <div className="loadbar"> <CircularProgress /></div> 
         ):(
              filteredFlowers.map((flower) => (
-            <FlowCard key={flower.id} name={flower.name} image={flower.image} price={flower.price}/>
+            <FlowCard key={flower.id} id={flower.id} name={flower.name} image={flower.image} price={flower.price}/>
         ))          
         )
       } 
