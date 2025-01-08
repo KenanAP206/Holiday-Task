@@ -45,7 +45,7 @@ function index() {
           <CircularProgress />
         ):(
              filteredFlowers.map((flower) => (
-            <FlowCard key={flower.id} name={flower.name} price={flower.price}/>
+            <FlowCard key={flower.id} name={flower.name} image={flower.image} price={flower.price}/>
         ))          
         )
       } 

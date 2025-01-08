@@ -8,7 +8,7 @@ function index(props) {
   return (
     <div className='flow-card'>
       <div className="fl-card-up">
-        <img srcSet="https://placehold.co/300x400?font=roboto" alt="" />
+        <img srcSet={props.image} alt="" />
         <div className="f-c-hover">
         <IoIosSearch />
         <IoBagHandleOutline />

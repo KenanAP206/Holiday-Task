@@ -4,7 +4,7 @@
           "id": 1,
           "name": "Fly Me To The Moon",
           "price": 27.50,
-          "image": "https://placehold.co/300x400/png",
+          "image": "https://preview.colorlib.com/theme/florist/img/product/product-1.jpg.webp",
           "status": "NEW",
           "category": "All"
         },
@@ -12,7 +12,7 @@
           "id": 2,
           "name": "Fly Me To The Moon",
           "price": 27.50,
-          "image": "https://placehold.co/300x400/png",
+          "image": "https://preview.colorlib.com/theme/florist/img/product/product-2.jpg.webp",
           "status": "NEW",
           "category": "All"
         },
@@ -20,7 +20,7 @@
           "id": 3,
           "name": "Fly Me To The Moon",
           "price": 27.50,
-          "image": "https://placehold.co/300x400/png",
+          "image": "https://preview.colorlib.com/theme/florist/img/product/product-3.jpg.webp",
           "status": "SALE",
           "category": "Flower shelf"
         },
@@ -28,7 +28,7 @@
           "id": 4,
           "name": "Fly Me To The Moon",
           "price": 27.50,
-          "image": "https://placehold.co/300x400/png",
+          "image": "https://preview.colorlib.com/theme/florist/img/product/product-4.jpg.webp",
           "status": "NEW",
           "category": "All"
         },
@@ -36,7 +36,7 @@
           "id": 5,
           "name": "Fly Me To The Moon",
           "price": 27.50,
-          "image": "https://placehold.co/300x400/png",
+          "image": "https://preview.colorlib.com/theme/florist/img/product/product-5.jpg.webp",
           "status": "OUT OF STOCK",
           "category": "Flower box"
         },
@@ -44,7 +44,42 @@
           "id": 6,
           "name": "Fly Me To The Moon",
           "price": 27.50,
-          "image": "https://placehold.co/300x400/png",
+          "image": "https://preview.colorlib.com/theme/florist/img/product/product-6.jpg.webp",
+          "status": "NEW",
+          "category": "Bouquet"
+        },
+        {
+          "id": 7,
+          "name": "Fly Me To The Moon",
+          "price": 27.50,
+          "image": "https://preview.colorlib.com/theme/florist/img/product/product-7.jpg.webp",
+          "status": "NEW",
+          "category": "Bouquet"
+        }
+        ,
+        {
+          "id": 8,
+          "name": "Fly Me To The Moon",
+          "price": 27.50,
+          "image": "https://preview.colorlib.com/theme/florist/img/product/product-8.jpg.webp",
+          "status": "NEW",
+          "category": "Bouquet"
+        }
+        ,
+        {
+          "id": 9,
+          "name": "Fly Me To The Moon",
+          "price": 27.50,
+          "image": "https://preview.colorlib.com/theme/florist/img/product/product-9.jpg.webp",
+          "status": "NEW",
+          "category": "Bouquet"
+        }
+        ,
+        {
+          "id": 10,
+          "name": "Fly Me To The Moon",
+          "price": 27.50,
+          "image": "https://preview.colorlib.com/theme/florist/img/product/product-10.jpg.webp",
           "status": "NEW",
           "category": "Bouquet"
         }
