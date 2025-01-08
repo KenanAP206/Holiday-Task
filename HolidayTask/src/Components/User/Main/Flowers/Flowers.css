@@ -1,0 +1,62 @@
+#Flowers{
+    margin: 100px auto;
+    .flow-all{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .flow-up{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h5{
+                font-family: "Quicksand", sans-serif;
+                color: #F45D96;
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: 2px;
+            }
+            h2{
+                margin-top: 20px;
+                font-size: 50px;
+                font-weight: 500;
+                font-family: "Libre Baskerville", serif;
+            }
+        }
+        .flow-nav{
+            display: flex;
+            justify-content: center;
+            ul{
+                display: flex;
+                gap: 30px;
+                list-style: none;
+
+                li{
+                    padding: 5px;
+                    cursor: pointer;
+                    &.active {
+                        border: 2px solid #ff69b4; 
+                      }
+                }
+            }
+        }
+
+        .flow-cards{
+            gap: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+        }
+
+        .flow-low{
+            margin: 40px auto 10px;
+            font-weight: 700;
+            width: max-content;
+            p{
+                font-family: "Quicksand", sans-serif;
+                letter-spacing: 2px;
+                border-bottom: 2px solid black;
+            }
+        }
+    }
+}

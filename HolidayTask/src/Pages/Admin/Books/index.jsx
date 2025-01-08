@@ -20,12 +20,12 @@ function index() {
     const [loading, setLoading] = useState(true);
   
     function HandleDelete(a){
-      axios.delete(`http://localhost:3000/books/${a}`) 
+      axios.delete(`http://localhost:3000/products/${a}`) 
       .then(()=> setRows((prevRows) => prevRows.filter((row) => row.id !== a)))
     }
 
     useEffect(() => {
-      axios.get('http://localhost:3000/books') 
+      axios.get('http://localhost:3000/products') 
         .then((response) => {
           setRows(response.data);
         })

@@ -12,7 +12,7 @@ function index() {
     let { id } = useParams(); 
     useEffect(() => {
       axios
-        .get(`http://localhost:3000/books/${id}`)
+        .get(`http://localhost:3000/products/${id}`)
         .then((res) => {
             setData(res.data); 
             formik.setValues({
@@ -74,7 +74,7 @@ function index() {
             .required('⚠️REQUIRED⚠️'), 
         }),
         onSubmit: values => {
-        axios.put(`http://localhost:3000/books/${id}`, values)
+        axios.put(`http://localhost:3000/products/${id}`, values)
              Swal.fire({
                     position: "top-end",
                     icon: "success",

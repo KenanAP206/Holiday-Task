@@ -13,7 +13,7 @@ function BookDetail() {
   let { id } = useParams(); 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/books/${id}`)
+      .get(`http://localhost:3000/products/${id}`)
       .then((res) => setData([res.data]))
   }, [id]);
   

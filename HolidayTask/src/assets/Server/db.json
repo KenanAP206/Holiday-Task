@@ -1,0 +1,53 @@
+{
+    "products":[
+        {
+          "id": 1,
+          "name": "Fly Me To The Moon",
+          "price": 27.50,
+          "image": "https://placehold.co/300x400/png",
+          "status": "NEW",
+          "category": "All"
+        },
+        {
+          "id": 2,
+          "name": "Fly Me To The Moon",
+          "price": 27.50,
+          "image": "https://placehold.co/300x400/png",
+          "status": "NEW",
+          "category": "All"
+        },
+        {
+          "id": 3,
+          "name": "Fly Me To The Moon",
+          "price": 27.50,
+          "image": "https://placehold.co/300x400/png",
+          "status": "SALE",
+          "category": "Flower shelf"
+        },
+        {
+          "id": 4,
+          "name": "Fly Me To The Moon",
+          "price": 27.50,
+          "image": "https://placehold.co/300x400/png",
+          "status": "NEW",
+          "category": "All"
+        },
+        {
+          "id": 5,
+          "name": "Fly Me To The Moon",
+          "price": 27.50,
+          "image": "https://placehold.co/300x400/png",
+          "status": "OUT OF STOCK",
+          "category": "Flower box"
+        },
+        {
+          "id": 6,
+          "name": "Fly Me To The Moon",
+          "price": 27.50,
+          "image": "https://placehold.co/300x400/png",
+          "status": "NEW",
+          "category": "Bouquet"
+        }
+      ]
+      
+}
