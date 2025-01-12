@@ -8,26 +8,54 @@ import { CircularProgress } from '@mui/material';
 function index() {
         let {products,loading} = useContext(productContext)
         const [activeCategory, setActiveCategory] = useState("All");
-        // const flowers = [
-        //   { id: 1, name: "Cactus", category: "Bouquet", img: "cactus.png", price:10 },
-        //   { id: 2, name: "Peony", category: "Flower box", img: "peony.png", price:10 },
-        //   { id: 3, name: "Hanging Plant", category: "Flower shelf", img: "hanging-plant.png", price:10 },
-        //   { id: 4, name: "Pink Bouquet", category: "Basket of flower", img: "pink-bouquet.png", price:10 },
-        //   { id: 5, name: "Mini Plant", category: "Gift combos", img: "mini-plant.png", price:10 },
-        //   { id: 5, name: "Mini Plant", category: "Gift combos", img: "mini-plant.png", price:10 },
-        // ];
+        const [searchTerm, setSearchTerm] = useState("");
+        const [sortOrder, setSortOrder] = useState("asc");
       
      
-        const filteredFlowers =
-          activeCategory === "All"
-            ? products || [] 
-            : (products || []).filter((flower) => flower.category === activeCategory);
+        const filteredFlowers = products
+            ? products
+                .filter(flower => 
+                    (activeCategory === "All" || flower.category === activeCategory) &&
+                    flower.name.toLowerCase().includes(searchTerm.toLowerCase())
+                )
+                .sort((a, b) => {
+                    if (sortOrder === "asc") {
+                        return a.price - b.price;
+                    } else {
+                        return b.price - a.price;
+                    }
+                })
+            : [];
   return (
     <section id='Flowers'>
         <div className="flow-all">
             <div className="flow-up">
                 <h5>OUR FLOWER</h5>
                 <h2>New Arrivals</h2>
+                <div className="search-sort-container" style={{ marginTop: '20px', display: 'flex', gap: '20px' }}>
+                    <input
+                        type="text"
+                        placeholder="Seach..."
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        style={{
+                            padding: '8px',
+                            borderRadius: '4px',
+                            border: '1px solid #ddd'
+                        }}
+                    />
+                    <button
+                        onClick={() => setSortOrder(sortOrder === "asc" ? "desc" : "asc")}
+                        style={{
+                            padding: '8px 16px',
+                            borderRadius: '4px',
+                            border: '1px solid #ddd',
+                            cursor: 'pointer'
+                        }}
+                    >
+                        Price: {sortOrder === "asc" ? "Ascending" : "Descending"}
+                    </button>
+                </div>
             </div>
             <div className="flow-nav">
                 <ul>

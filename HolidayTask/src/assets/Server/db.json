@@ -2,7 +2,7 @@
   "products": [
     {
       "id": "1",
-      "name": "Fly Me To The Moon",
+      "name": "A Fly Me To The Moon",
       "price": 27.5,
       "image": "https://preview.colorlib.com/theme/florist/img/product/product-1.jpg.webp",
       "status": "NEW",
@@ -10,7 +10,7 @@
     },
     {
       "id": "2",
-      "name": "Fly Me To The Moon",
+      "name": "B Fly Me To The Moon",
       "price": 27.5,
       "image": "https://preview.colorlib.com/theme/florist/img/product/product-2.jpg.webp",
       "status": "NEW",
@@ -18,39 +18,39 @@
     },
     {
       "id": "3",
-      "name": "Fly Me To The Moon",
-      "price": 27.5,
+      "name": "C Fly Me To The Moon",
+      "price": 20.5,
       "image": "https://preview.colorlib.com/theme/florist/img/product/product-3.jpg.webp",
       "status": "SALE",
       "category": "Flower shelf"
     },
     {
       "id": "4",
-      "name": "Fly Me To The Moon",
-      "price": 27.5,
+      "name": "D Fly Me To The Moon",
+      "price": 17.5,
       "image": "https://preview.colorlib.com/theme/florist/img/product/product-4.jpg.webp",
       "status": "NEW",
       "category": "Gift combos"
     },
     {
       "id": "5",
-      "name": "Fly Me To The Moon",
-      "price": 27.5,
+      "name": "E Fly Me To The Moon",
+      "price": 37.5,
       "image": "https://preview.colorlib.com/theme/florist/img/product/product-5.jpg.webp",
       "status": "OUT OF STOCK",
       "category": "Flower box"
     },
     {
       "id": "6",
-      "name": "Fly Me To The Moon",
-      "price": 27.5,
+      "name": "F Fly Me To The Moon",
+      "price": 47.5,
       "image": "https://preview.colorlib.com/theme/florist/img/product/product-6.jpg.webp",
       "status": "NEW",
       "category": "Bouquet"
     },
     {
       "id": "7",
-      "name": "Fly Me To The Moon",
+      "name": "G Fly Me To The Moon",
       "price": 27.5,
       "image": "https://preview.colorlib.com/theme/florist/img/product/product-7.jpg.webp",
       "status": "NEW",
@@ -58,8 +58,8 @@
     },
     {
       "id": "8",
-      "name": "Fly Me To The Moon",
-      "price": 27.5,
+      "name": "H Fly Me To The Moon",
+      "price": 10.5,
       "image": "https://preview.colorlib.com/theme/florist/img/product/product-8.jpg.webp",
       "status": "NEW",
       "category": "Bouquet"
